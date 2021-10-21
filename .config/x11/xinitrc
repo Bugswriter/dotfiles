@@ -1,3 +1,10 @@
 #!/bin/sh
 
-dwm
+set_wallpaper &
+xcompmgr &
+dunst &
+xset r rate 300 50 &
+xmodmap ~/.config/Xmodmap &
+unclutter &
+
+exec dwm > /dev/null 2>&1
