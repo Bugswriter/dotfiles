@@ -7,11 +7,12 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 
 export XINITRC="$XDG_CONFIG_HOME/x11/xinitrc"
-export ZDOTDIR=$HOME/.config/zsh
-export PATH=$PATH:$HOME/.local/bin
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export INPUTRC="$XDG_CONFIG_HOME/shell/inputrc"
 export GNUPGHOME=$HOME/.local/share/gnupg
 export PASSWORD_STORE_DIR=$HOME/.local/share/password-store
+
+export PATH=$PATH:$HOME/.local/bin
 
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
   exec startx
