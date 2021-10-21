@@ -1,0 +1,14 @@
+# My Hotkeys
+
+Print
+ maim --select | tee ~/pix/ss/$(date +s%).png | xclip -selection c -t image/png
+
+Super + Print 
+ maim | tee ~/pix/ss/$(date +%s).png | xclip -selection c -t image/png
+
+XF86Audio{Mute,LowerVolume,RaiseVolume}
+  amixer set Master {toggle,5%-,5%+} ; kill -34 $(cat ~/.cache/pidofbar)
+
+super + Escape
+  system_action
+  
