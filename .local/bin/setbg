@@ -5,14 +5,16 @@
 
 wall_dir=~/pix/wall
 
-if [ ! -z "$1" ]; then
+if [ -z "$1" ]; then
+  wall="$1"
+else
   wall=$(
-      find "$wall_dir" -type f \( -name "*.png" -o -name "*.jpg" \) |\
+  find |\
       shuf -n1
     )
-else
-  wall="$1"
-if
+fi
+
+echo "$wall"
 
 convert "$wall" ~/.config/wall.jpg
 xwallpaper --zoom ~/.config/wall.jpg
