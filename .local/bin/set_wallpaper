@@ -3,18 +3,11 @@
 # Dependencies:
 # convert wal xdotool xwallpaper 
 
-wall_dir=~/pix/wall
-
 if [ -z "$1" ]; then
-  wall="$1"
+  wall="$(find ~/pix/wall -type f -name "*.jpg" -o -name "*.png" | shuf -n1)"
 else
-  wall=$(
-  find |\
-      shuf -n1
-    )
+  wall="$1"
 fi
-
-echo "$wall"
 
 convert "$wall" ~/.config/wall.jpg
 xwallpaper --zoom ~/.config/wall.jpg
