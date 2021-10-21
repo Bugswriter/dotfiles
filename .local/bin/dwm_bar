@@ -14,8 +14,8 @@ update_time () {
 
 update_bat () { 
 	# you might need to change the path depending on your device
-	read -r bat_status </sys/class/power_supply/BAT1/status
-	read -r bat_capacity </sys/class/power_supply/BAT1/capacity
+	read -r bat_status </sys/class/power_supply/BAT0/status
+	read -r bat_capacity </sys/class/power_supply/BAT0/capacity
 	bat="$bat_status $bat_capacity%"
 }
 
@@ -27,13 +27,12 @@ update_vol () {
 update_vol
 
 display () { 
-	xsetroot -name "[  $memory ] [ $vol ] $time "
+	xsetroot -name "[  $memory ] [ $vol ] $time [ $bat ] "
 }
 
 # Handling receiving signal
 # RTMIN = 34 (always)
 trap	"update_vol;display"	"RTMIN"
-#trap	"update_bat;display"	"RTMIN+2"
 
 ## kill -m "$(cat ~/.cache/pidofbar)"
 # where m = 34 + n
@@ -44,9 +43,9 @@ do
   wait && { 
 		# to update item ever n seconds with a offset of m
 		## [ $((sec % n)) -eq m ] && udpate_item
+		[ $((sec % 5 )) -eq 0 ] && update_time
 		[ $((sec % 15)) -eq 0 ] && update_memory
-		[ $((sec % 5 )) -eq 0 ] && update_time 	# update time every 5 seconds
-		[ $((sec % 15)) -eq 0 ] && update_cpu 	# update cpu every 15 seconds
+		[ $((sec % 60 )) -eq 0 ] && update_bat
 
 		# how often the display updates ( 5 seconds )
 		[ $((sec % 5 )) -eq 0 ] && display
