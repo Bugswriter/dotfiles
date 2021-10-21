@@ -9,8 +9,8 @@ else
   wall="$1"
 fi
 
-convert "$wall" ~/.config/wall.jpg
-xwallpaper --zoom ~/.config/wall.jpg
+convert "$wall" ~/.local/share/bg.jpg
+xwallpaper --zoom ~/.local/share/bg.jpg
 wal -c
-wal -i ~/.config/wall.jpg
+wal -i ~/.local/share/bg.jpg
 xdotool key super+F5
