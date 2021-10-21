@@ -3,3 +3,4 @@ alias ytadl="youtube-dl -f bestaudio -o '%(title)s.%(ext)s'"
 alias ytdl="youtube-dl -f best -o '%(title)s.%(ext)s'"
 alias ytpdl="youtube-dl -f best -o '%(playlist_index)s. %(title)s.%(ext)s'" 
 alias syncsite="rsync -rtvzP ~/bwpw/public/* root@bugswriter.com:/var/www/site"
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
