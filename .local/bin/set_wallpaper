@@ -3,8 +3,10 @@
 # Dependencies:
 # convert wal xdotool xwallpaper 
 
+wall_dir=~/.local/share/wall/
+
 if [ -z "$1" ]; then
-  wall="$(find ~/pix/wall -type f -name "*.jpg" -o -name "*.png" | shuf -n1)"
+  wall="$(find "$wall_dir" -type f -name "*.jpg" -o -name "*.png" | shuf -n1)"
 else
   wall="$1"
 fi
