@@ -1,1 +1,1 @@
-.config/x11/xinitrc
+/home/bugs/.config/x11/xinitrc
