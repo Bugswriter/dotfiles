@@ -16,11 +16,25 @@ update_bat () {
 	# you might need to change the path depending on your device
 	read -r bat_status </sys/class/power_supply/BAT0/status
 	read -r bat_capacity </sys/class/power_supply/BAT0/capacity
+	if [ "$bat_status" = "Charging" ]; then
+		bat_status=""
+	elif [ "$bat_capacity" -gt 90 ]; then
+		bat_status=""
+	elif [ "$bat_capacity" -gt 65 ]; then
+		bat_status=""
+	elif [ "$bat_capacity" -gt 45 ]; then
+		bat_status=""
+	elif [ "$bat_capacity" -gt 20 ]; then
+		bat_status=""
+	else 
+		bat_status=""
+	fi
 	bat="$bat_status $bat_capacity%"
 }
 
 update_vol () { 
-	vol="$([ "$(pamixer --get-mute)" = "false" ] && printf ' ' || printf ' ')$(pamixer --get-volume)%"
+
+	vol="$([ "$(pamixer --get-mute)" = "false" ] && printf ' ' || printf ' ')$(pamixer --get-volume)%"
 }
 
 # We have to run this only once.
