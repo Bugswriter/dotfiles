@@ -3,10 +3,8 @@
 while read file
 do
   case "$1" in
-    "w") setbg $file ;; 
-    "c") cat $file | xclip -sel c -t image/png ;; 
-    "r") convert $file -rotate 90 /tmp/out.jpg ;; 
-    "d") mv $file ~/.trash;; 
+    "w") set_wallpaper $file ;; 
+    "d") rm $file;; 
   esac 
 done
 
