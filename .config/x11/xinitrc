@@ -5,6 +5,7 @@ dwm_bar &
 xcompmgr &
 dunst &
 xset r rate 300 50 &
+sxhkd &
 xmodmap ~/.config/xmodmap/Xmodmap &
 unclutter &
 
