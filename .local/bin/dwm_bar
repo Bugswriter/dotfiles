@@ -33,7 +33,6 @@ update_bat () {
 }
 
 update_vol () { 
-
 	vol="$([ "$(pamixer --get-mute)" = "false" ] && printf ' ' || printf ' ')$(pamixer --get-volume)%"
 }
 
