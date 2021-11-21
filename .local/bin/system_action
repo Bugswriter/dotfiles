@@ -11,6 +11,6 @@ case "$(printf " lock\n display off\n logout\n sleep\n reboot\n�
 	' logout') kill -TERM "$(pgrep -u "$USER" "\bdwm$")" ;;
 	' sleep') slock $ctl suspend ;;
 	' reboot') $ctl reboot ;;
-	'shutdown') $ctl poweroff ;;
+	' shutdown') $ctl poweroff ;;
 	*) exit 1 ;;
 esac

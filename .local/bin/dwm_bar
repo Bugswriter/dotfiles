@@ -40,7 +40,7 @@ update_vol () {
 update_vol
 
 display () { 
-	xsetroot -name "[  $memory ] [ $vol ] $time [ $bat ] "
+	xsetroot -name "[  $memory ] [ $vol ] $time"
 }
 
 # Handling receiving signal
@@ -58,7 +58,7 @@ do
 		## [ $((sec % n)) -eq m ] && udpate_item
 		[ $((sec % 5 )) -eq 0 ] && update_time
 		[ $((sec % 15)) -eq 0 ] && update_memory
-		[ $((sec % 60 )) -eq 0 ] && update_bat
+		#[ $((sec % 60 )) -eq 0 ] && update_bat
 
 		# how often the display updates ( 5 seconds )
 		[ $((sec % 5 )) -eq 0 ] && display
