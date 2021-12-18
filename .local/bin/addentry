@@ -1,0 +1,20 @@
+#!/bin/sh
+
+diary_path=~/diary
+
+month_file_name="$(date +%b | tr '[:upper:]' '[:lower:]')-$(date +%Y)"
+rm /tmp/entry.html
+$EDITOR /tmp/entry.html
+
+date_str="$(date "+%a %I:%m.%P %d.%m.%4Y")"
+
+make_entry() {
+	printf '<div class="entry">\n'
+	printf '<span class="entry-timestamp">%s</span>\n' "$date_str"
+	printf '<div class="entry-content">\n'
+	cat /tmp/entry.html
+	printf '</div>\n'
+	printf '</div>'
+}
+
+make_entry >> $diary_path/entries/$(date +%Y)/$month_file_name.html

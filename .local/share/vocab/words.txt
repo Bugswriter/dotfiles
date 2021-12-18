@@ -1,6 +1,5 @@
 ecstatic -> a very excited happy person
 meritocracy -> a form of social system in which power goes to those with superior intellects
-despise -> look down upon, opposite of respect, to hate someone
 scorn -> a strong feeling you have when you don't respect something/somebody
 slumber -> light sleep, To be in a state of negligence, sloth, supineness, or inactivity, slumber party
 rudder -> a wood piece which control the direction of plane or ship
@@ -15,3 +14,6 @@ contemplation -> meditate on the vastness of the universe
 cemetery -> graveyard and a place that doesn't belong to a church
 disembowel -> cut open and remove the internal organs of
 ravage -> to damage something very badly
+bluff -> to try to make people believe that something is true when it is not
+compulsion -> majboori
+eulogy -> speech to say something good about someone/something .. also funeral speech

@@ -1,3 +1,5 @@
 [user]
 	name = Suraj Kushwah
 	email = suraj@bugswriter.com
+[advice]
+	statusHints = false
