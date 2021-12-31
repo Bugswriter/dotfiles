@@ -7,3 +7,5 @@ alias syncsite="rsync -rtvzP --delete ~/bwpw/public/* root@bugswriter.com:/var/w
 
 alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias hst="history | cut -c 8- | sort | uniq | fzf | tr '\\n' ' ' | xclip -sel c"
+
+alias catgirl="catgirl -h irc.bugswriter.com -c ~/.local/share/catgirl/pounceprivkey.pem"
