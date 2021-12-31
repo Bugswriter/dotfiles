@@ -2,10 +2,6 @@ alias ytbdl="youtube-dl -f bestvideo+bestaudio -o '%(title)s.%(ext)s' --external
 alias ytadl="youtube-dl -x -f bestaudio -o '%(title)s.%(ext)s' --external-downloader=aria2c"
 alias ytdl="youtube-dl -f best -o '%(title)s.%(ext)s' --external-downloader=aria2c"
 alias ytpdl="youtube-dl -f best -o '%(playlist_index)s. %(title)s.%(ext)s' --external-downloader=aria2c" 
-
-alias syncsite="rsync -rtvzP --delete ~/bwpw/public/* root@bugswriter.com:/var/www/site"
-
-alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias hst="history | cut -c 8- | sort | uniq | fzf | tr '\\n' ' ' | xclip -sel c"
-
+alias hst="history 1 -1 | cut -c 8- | sort | uniq | fzf | tr -d '\n' | xclip -sel c"
 alias catgirl="catgirl -h irc.bugswriter.com -c ~/.local/share/catgirl/pounceprivkey.pem"
+alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
