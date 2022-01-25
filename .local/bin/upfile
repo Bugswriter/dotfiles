@@ -1,7 +1,0 @@
-#!/bin/sh
-
-newname="$(date +%s).jpg"
-convert $1 -resize 800 -strip /tmp/$newname
-scp /tmp/$newname root@bugswriter.com:/var/www/files/pix/
-echo "https://bugswriter.com/images/$newname" | xclip -sel c
-notify-send "Images Uploaded" "$newname" 

@@ -7,7 +7,7 @@ super + Print
 	maim | tee ~/pix/ss/$(date +%s).jpg | xclip -sel c -t image/jpg
 
 XF86Audio{RaiseVolume,LowerVolume,Mute}
-	pamixer -{i,d,t} 1; kill -34 $(cat ~/.cache/pidofbar)
+	pamixer -{i,d,t} 2; kill -34 $(cat ~/.cache/pidofbar)
 
 super + Escape
 	system_action
