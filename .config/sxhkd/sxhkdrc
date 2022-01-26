@@ -9,5 +9,8 @@ super + Print
 XF86Audio{RaiseVolume,LowerVolume,Mute}
 	pamixer -{i,d,t} 2; kill -34 $(cat ~/.cache/pidofbar)
 
+XF86MonBrightness{Up,Down}
+	brightnessctl s {+2%,2%-}
+
 super + Escape
 	system_action
