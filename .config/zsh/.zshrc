@@ -3,6 +3,7 @@ ZSH_THEME="alanpeabody"
 HISTFILE=~/.cache/zsh/history
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source "$XDG_CONFIG_HOME/shell/aliasrc"
 cowsay "$(shuf -n 1 ~/.local/share/vocab/words.txt)"
 
@@ -13,6 +14,7 @@ function countdown(){
      sleep 0.1
    done
 }
+
 function stopwatch(){
   date1=`date +%s`; 
    while true; do 
