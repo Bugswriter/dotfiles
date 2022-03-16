@@ -1,6 +1,5 @@
 export ZSH="$HOME/.config/zsh/oh-my-zsh"
 ZSH_THEME="alanpeabody"
-HISTFILE=~/.cache/zsh/history
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

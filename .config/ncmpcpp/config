@@ -1,0 +1,3 @@
+visualizer_type = "spectrum"
+ncmpcpp_directory = "~/.config/ncmpcpp"
+lyrics_directory = "~/.local/share/lyrics"

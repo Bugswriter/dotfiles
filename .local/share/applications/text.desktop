@@ -1,4 +1,4 @@
 [Desktop Entry]
 Type=Application
 Name=Text editor
-Exec=/usr/local/bin/st -e nvim %u
+Exec=/usr/local/bin/st -e vim %u
